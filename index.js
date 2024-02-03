@@ -2,6 +2,11 @@ import express from 'express';
 import path from 'path';
 const app = express();
 
+const adminCredentials = {
+    adminId: 'sujal',
+    password: '123'
+};
+
 
 const users=[];
 app.set('view engine', 'ejs');
@@ -33,6 +38,7 @@ app.post('/', (req, res) => {
     res.send('Data received');
 
 });
+
 
 
 app.get('/about', (req, res) => {
